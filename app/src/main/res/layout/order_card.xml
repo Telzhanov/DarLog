@@ -1,0 +1,76 @@
+<android.support.v7.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/orderCard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="1dp">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+        <TextView
+            android:id="@+id/orderCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. "
+            android:textColor="#FF464646"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23.04.2018 16:32"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/orderCount"
+            app:layout_constraintTop_toTopOf="@id/orderCount" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderFrom"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/orderCount"
+            app:layout_constraintTop_toBottomOf="@id/orderCount"
+            android:text="от: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderFromName"
+            app:layout_constraintTop_toTopOf="@+id/orderFrom"
+            app:layout_constraintStart_toEndOf="@id/orderFrom"
+            android:text="Dar Bazar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderId"
+            app:layout_constraintTop_toTopOf="@id/orderCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:text="#437276"
+            android:textStyle="bold"
+            android:textColor="#FF464646"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderToAdress"
+            app:layout_constraintTop_toTopOf="@id/orderFrom"
+            app:layout_constraintEnd_toEndOf="@id/orderId"
+            android:text="Айтиева, 108"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderTo"
+            app:layout_constraintEnd_toStartOf="@id/orderToAdress"
+            app:layout_constraintTop_toTopOf="@id/orderToAdress"
+            android:text="Кому: "/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

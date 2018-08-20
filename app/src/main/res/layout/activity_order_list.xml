@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.darlogistics.courier.orderList.OrderListActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarOrderList"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        style="@style/Toolbar"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="История накладных"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:gravity = "center"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tabLayout"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:elevation="3dp"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="#FFF57A6D"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabSelectedTextColor="#FFF"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarOrderList">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/viewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </android.support.v4.view.ViewPager>
+
+</android.support.constraint.ConstraintLayout>
