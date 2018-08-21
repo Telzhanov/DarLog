@@ -56,12 +56,14 @@
             android:textColor="#FF464646"
             android:textSize="16sp" />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/orderToAdress"
             app:layout_constraintTop_toTopOf="@id/orderFrom"
             app:layout_constraintEnd_toEndOf="@id/orderId"
             android:text="Айтиева, 108"
+            android:ellipsize="end"
+            android:maxLines="1"
             />
         <TextView
             android:layout_width="wrap_content"

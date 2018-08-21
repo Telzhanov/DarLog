@@ -18,10 +18,10 @@ class OrderListAdapter(var orders:ArrayList<Data>):RecyclerView.Adapter<Recycler
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        holder.itemView.orderCount.text = (position+1).toString()
-        holder.itemView.orderId.text = orders[position].id.toString()
+        holder.itemView.orderCount.text = (position+1).toString()+". "
+        holder.itemView.orderId.text = "#"+orders[position].id.toString()
         holder.itemView.orderDate.text =orders[position].created_at
-        holder.itemView.orderFromName.text = orders[position].from_text
+        holder.itemView.orderFromName.text = orders[position].waybill.company_sender.name
         holder.itemView.orderToAdress.text = orders[position].to_value_text
     }
 }

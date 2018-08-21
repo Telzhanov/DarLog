@@ -11,10 +11,16 @@ interface OrderListContract {
 
     interface OrderListPresenter : IPresenter<OrderListContract.OrderListView> {
         fun setOrders(orders:ArrayList<Data>)
-        fun getOrders()
+        fun getCurrentOrders()
+        fun getNewOrders()
+        fun getHistoryOrders()
+        fun getRefundsOrders()
     }
 
     interface OrderListRepository {
-        fun getOrders(userId:Int,token:String)
+        fun getCurrentOrders(userId:Int,token:String)
+        fun getNewOrders(userId:Int)
+        fun getHistoryOrders(userId:Int)
+        fun getRefundsOrders(userId:Int,token:String)
     }
 }
